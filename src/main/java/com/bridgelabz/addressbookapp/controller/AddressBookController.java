@@ -25,8 +25,8 @@ public class AddressBookController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<ContactDTO>> getContactById(@PathVariable Long id) {
-        return new ResponseEntity<Optional<ContactDTO>>(addressBookService.getContact(id), HttpStatus.OK);
+    public ResponseEntity<ContactDTO> getContactById(@PathVariable Long id) {
+        return new ResponseEntity<ContactDTO>(addressBookService.getContact(id), HttpStatus.OK);
     }
 
     @PostMapping
