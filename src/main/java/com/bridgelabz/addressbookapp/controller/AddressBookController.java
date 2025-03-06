@@ -1,11 +1,16 @@
 package com.bridgelabz.addressbookapp.controller;
 
+import com.bridgelabz.addressbookapp.service.AddressBookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/addressbookapp")
 public class AddressBookController {
+
+    @Autowired
+    AddressBookService addressBookService;
 
     @GetMapping
     public ResponseEntity<String> getAllContacts() {
